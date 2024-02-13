@@ -1,6 +1,8 @@
 :root {
     --PAPAYA: #E24E42;
     --AQUA: #008F95;
+    --LIGHT-GRAY: #f2f6fc;
+    --GREEN: #008000;
 }
 
 * {
@@ -10,9 +12,7 @@
 }
 
 html {
-    background-color: #ffffff;
-    background-image: radial-gradient(rgba(235, 110, 128, .25) 1.1px, #ffffff 1.1px);
-    background-size: 22px 22px;
+    background-color: var(--LIGHT-GRAY);
 }
 
 body, form, input {
@@ -21,24 +21,36 @@ body, form, input {
 
 body {
     font-size: 1.1rem;
-    text-align: center;
+    line-height: 1.75rem;
+    width: fit-content;
+    margin: 50px auto;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.content-wrapper {
     padding: 5rem;
-    width: 80%;
-    margin: auto;
+}
+
+section {
+    width: fit-content;
 }
 
 h1 {
-    color: var(--PAPAYA);
+    color: var(--GREEN);
     margin-bottom: 1.5rem;
 }
 
 h3 {
-    color: var(--AQUA);
-    font-weight: 500;
+    color: var(--GREEN);
+    font-weight: 400;
+    opacity: 70%;
 }
 
 form {
     margin: 3rem 0;
+    width: fit-content;
     display: flex;
     align-items: flex-end;
     justify-content: center;
@@ -50,7 +62,8 @@ form, input {
 
 label {
     font-weight: bold;
-    color: var(--PAPAYA);
+    color: var(--GREEN);
+    text-transform: uppercase;
     margin-bottom: .3rem;
 }
 
@@ -60,6 +73,8 @@ input  {
     text-align: center;
     outline: none;
     background: none;
+    border: none;
+    border-radius: 4px;
 }
 
 #widthInput, #heightInput {
@@ -72,14 +87,15 @@ input  {
     height: 3rem;
     padding: .5rem 2rem;
     font-weight: bold;
-    color: var(--PAPAYA);
-    border: 2px solid var(--PAPAYA);
+    color: var(--GREEN);
+    border-bottom: 2px solid var(--GREEN);
+    background-color: var(--LIGHT-GRAY);
     transition: 100ms;
 }
 
 #submit:hover {
     color: white;
-    background-color: var(--PAPAYA);
+    background-color: var(--GREEN);
     cursor: pointer;
 }
 
@@ -90,15 +106,13 @@ input  {
 #width, #height {
     width: 6rem;
     margin-right: 1rem;
-    border: 2px solid var(--PAPAYA);
+    border: 2px solid var(--GREEN);
 }
 
 footer {
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
     padding: .75rem;
-    color: white;
-    background-color: var(--PAPAYA);
+    text-align: center;
+    color: gray;
+    background-color: var(--LIGHT-GRAY);
+    border-radius: 0 0 12px 12px;
 }
